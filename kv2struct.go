@@ -139,13 +139,15 @@ func reflectFieldFromTag(dataSource InterfaceKeyValue, field reflect.StructField
 				fieldValue.Type(), fieldStringData, field.Name, tag))
 		}
 	case reflect.Ptr:
-		return errors.New(fmt.Sprintf(
-			"unsupported ptr type: %v ,value: %v ,query key: %v, field: %v",
+		fmt.Printf(fmt.Sprintf(
+			"unsupported ptr type: %v ,value: %v ,query key: %v, field: %v\n",
 			fieldValue.Type(), fieldStringData, tag, field.Name))
+	case reflect.Array:
+		fmt.Printf("unsupported ptr type: %v ,value: %v ,query key: %v, field: %v\n",
+			fieldValue.Type(), fieldStringData, tag, field.Name)
 	default:
-		return errors.New(fmt.Sprintf(
-			"unsupported type: %v ,value: %v ,query key: %v, field: %v",
-			fieldValue.Type(), fieldStringData, tag, field.Name))
+		fmt.Printf("unsupported type: %v ,value: %v ,query key: %v, field: %v\n",
+			fieldValue.Type(), fieldStringData, tag, field.Name)
 	}
 
 	return nil
