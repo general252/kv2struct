@@ -2,6 +2,16 @@
 golang key values convert to struct
 ref [youkale/go-querystruct](https://github.com/youkale/go-querystruct)
 
+支持struct嵌套,
+支持的类型
+```
+string
+bool
+uint uint8 uint16 uint32 uint64 uinptr
+int int8 int16 int32 int64
+flat32 float64
+```
+
 ### Usage
 ```
 
