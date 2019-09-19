@@ -4,12 +4,13 @@ ref [youkale/go-querystruct](https://github.com/youkale/go-querystruct)
 
 ### Usage
 ```
+
 package main
 
 import (
-	"./kv2struct"
 	"encoding/json"
 	"fmt"
+	"github.com/general252/kv2struct"
 	"log"
 	"math/rand"
 	"net/url"
@@ -82,5 +83,6 @@ func main() {
 	data, _ := json.Marshal(o)
 	fmt.Println(string(data))
 }
+
 
 ```
